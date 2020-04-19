@@ -4,21 +4,21 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = getenv('pgsql');
+$CFG->dbtype    = getenv('DATABASE_TYPE');
 $CFG->dblibrary = 'native';
-$CFG->dbhost    = getenv('ec2-54-247-118-139.eu-west-1.compute.amazonaws.com');
-$CFG->dbname    = getenv('d3uv586emgp79t');
-$CFG->dbuser    = getenv('ntgxkwppmhbqjy');
-$CFG->dbpass    = getenv('c51a6dbb97b04ccdd3d5da95ec33fcf3b2103500c34e8b94cf437f3282ec2f43');
+$CFG->dbhost    = getenv('DATABASE_HOST');
+$CFG->dbname    = getenv('DATABASE_NAME');
+$CFG->dbuser    = getenv('DATABASE_USER');
+$CFG->dbpass    = getenv('DATABASE_PASSWORD');
 $CFG->prefix    = 'mdl_';
 $CFG->dboptions = array (
   'dbpersist' => 0,
-  'dbport' => getenv('5432'),
+  'dbport' => getenv('DATABASE_PORT'),
   'dbsocket' => '',
 );
 
-$CFG->wwwroot   = getenv('http://imsponline.herokuapp.com');
-$CFG->dataroot  = getenv('/tmp');
+$CFG->wwwroot   = getenv('WWWROOT');
+$CFG->dataroot  = getenv('DATAROOT');
 $CFG->admin     = 'admin';
 
 $CFG->directorypermissions = 0777;
