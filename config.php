@@ -4,7 +4,7 @@ unset($CFG);
 global $CFG;
 $CFG = new stdClass();
 
-$CFG->dbtype    = 'postgres';
+$CFG->dbtype    = 'pgsql';
 $CFG->dblibrary = 'native';
 $CFG->dbhost    = 'ec2-54-247-118-139.eu-west-1.compute.amazonaws.com';
 $CFG->dbname    = 'd3uv586emgp79t';
